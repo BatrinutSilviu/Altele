@@ -51,9 +51,9 @@ int minDistance(int dist[], bool sptSet[])
 {
 	int min = INT_MAX, min_index;
 
-	for (int v = 1; v <= numarNoduri; v++)
-		if (sptSet[v] == false && dist[v] <= min)
-			min = dist[v], min_index = v;
+	for (int iterator = 1; iterator <= numarNoduri; iterator++)
+		if (sptSet[iterator] == false && dist[iterator] <= min)
+			min = dist[iterator], min_index = iterator;
 
 	return min_index;
 }
@@ -70,16 +70,16 @@ void dijkstra(int graph[numarNoduri+1][numarNoduri+1], int src)
 
 	for (int count = 1; count <= numarNoduri - 1; count++)
 	{
-		int u = minDistance(dist, sptSet);
-		sptSet[u] = true;
-		for (int v = 1; v <= numarNoduri; v++)
-			if (!sptSet[v] && graph[u][v] && dist[u] != INT_MAX
-				&& dist[u] + graph[u][v] < dist[v])
-				dist[v] = dist[u] + graph[u][v];
+		int minim = minDistance(dist, sptSet);
+		sptSet[minim] = true;
+		for (int iterator = 1; iterator <= numarNoduri; iterator++)
+			if (!sptSet[iterator] && graph[minim][iterator] && dist[minim] != INT_MAX
+				&& dist[minim] + graph[minim][iterator] < dist[iterator])
+				dist[iterator] = dist[minim] + graph[minim][iterator];
 	}
-	for (int i = 1; i <= numarNoduri; i++)
-		if(dist[i]!= INT_MAX)
-			std::cout<<i<<"\t"<< dist[i]<<"\n";
+	for (int iterator = 1; iterator <= numarNoduri; iterator++)
+		if(dist[iterator]!= INT_MAX)
+			std::cout<<iterator<<"\t"<< dist[iterator]<<"\n";
 }
 
 void floydWarshall(int graph[numarNoduri + 1][numarNoduri + 1])
