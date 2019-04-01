@@ -1,8 +1,8 @@
-parcurgeri, 
-drumuri minime, 
-cicluri euleriene, 
-hamiltoniene, 
-arbori partiali de cost maxim, 
-componente conexe, 
-tare conexe, 
-biconexe
+parcurgeri,                       bifat
+drumuri minime,                   bifat
+cicluri euleriene,                
+hamiltoniene,                     
+arbori partiali de cost maxim,    
+componente conexe,                bifat
+tare conexe,                      
+biconexe                          
