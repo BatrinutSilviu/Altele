@@ -1,8 +1,8 @@
 parcurgeri,                       bifat
 drumuri minime,                   bifat
-cicluri euleriene,                
-hamiltoniene,                     
+cicluri euleriene,                bifat
+hamiltoniene,                     bifat
 arbori partiali de cost maxim,    
 componente conexe,                bifat
 tare conexe,                      
-biconexe                          
+biconexe                          bifat 
